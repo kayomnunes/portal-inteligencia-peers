@@ -1,0 +1,35 @@
+{
+  "_como_usar": "Liga cada indicador do portal a uma série pública. 'segmento' e 'indicador' precisam ser iguais aos nomes em Frontend/dados/indicadores.json. Conectores: 'sgs' (Banco Central, código da série) e 'sidra' (IBGE, caminho da consulta na API SIDRA, sem o período). 'escala' divide o valor bruto (ex.: R$ milhões -> R$ tri = 1000000). 'var': 'pct' calcula a variação % sobre 12 meses antes; 'pp' calcula a diferença em pontos. 'acumular_12m': soma as variações mensais dos últimos 12 meses (para séries mensais em %). Indicadores fora desta lista continuam com valor de exemplo.",
+  "series": [
+    {"segmento": "Bancos", "indicador": "Carteira de crédito do SFN", "conector": "sgs", "codigo": 20539, "escala": 1000000, "var": "pct"},
+    {"segmento": "Bancos", "indicador": "Inadimplência acima de 90 dias", "conector": "sgs", "codigo": 21082, "var": "pp"},
+    {"segmento": "Bancos", "indicador": "Spread médio das operações de crédito", "conector": "sgs", "codigo": 20783, "var": "pp"},
+    {"segmento": "Administração pública", "indicador": "Dívida bruta do governo geral", "conector": "sgs", "codigo": 13762, "var": "pp"},
+    {"segmento": "Construção civil, construção pesada e engenharia", "indicador": "INCC", "conector": "sgs", "codigo": 192, "acumular_12m": true, "var": "pp"},
+
+    {"segmento": "Indústria de transformação", "indicador": "Produção física da indústria de transformação", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129316", "var": "pct"},
+    {"segmento": "Alimentos", "indicador": "Produção física da indústria de alimentos", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129317", "var": "pct"},
+    {"segmento": "Bebidas", "indicador": "Produção física de bebidas", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129318", "var": "pct"},
+    {"segmento": "Química e petroquímica", "indicador": "Produção física da indústria química", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/56689", "var": "pct"},
+    {"segmento": "Farmacêutica, dispositivos e diagnóstico", "indicador": "Produção física farmacêutica", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129330", "var": "pct"},
+    {"segmento": "Papel e celulose", "indicador": "Produção física de celulose e papel", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129324", "var": "pct"},
+    {"segmento": "Siderurgia", "indicador": "Produção física da metalurgia", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129333", "var": "pct"},
+    {"segmento": "Automotivo", "indicador": "Produção física de veículos automotores", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129338", "var": "pct"},
+    {"segmento": "Eletroeletrônicos", "indicador": "Produção física de eletroeletrônicos", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129335", "var": "pct"},
+    {"segmento": "Hardware, dispositivos e componentes", "indicador": "Produção física de informática e eletrônicos", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129335", "var": "pct"},
+    {"segmento": "Construção civil, construção pesada e engenharia", "indicador": "Produção física de minerais não metálicos", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129332", "var": "pct"},
+    {"segmento": "Vestuário", "indicador": "Produção física têxtil e de vestuário", "conector": "sidra", "consulta": "t/8888/n1/all/v/12606/c544/129321", "var": "pct"},
+
+    {"segmento": "Varejo geral", "indicador": "Volume de vendas do varejo restrito", "conector": "sidra", "consulta": "t/8880/n1/all/v/7169/c11046/56734", "var": "pct"},
+    {"segmento": "Varejo geral", "indicador": "Volume de vendas do varejo ampliado", "conector": "sidra", "consulta": "t/8881/n1/all/v/7169/c11046/56736", "var": "pct"},
+    {"segmento": "Supermercados e hipermercados", "indicador": "Volume de vendas de hiper e supermercados", "conector": "sidra", "consulta": "t/8882/n1/all/v/7169/c11046/56734/c85/103154", "var": "pct"},
+    {"segmento": "Supermercados e hipermercados", "indicador": "Receita nominal de hiper e supermercados", "conector": "sidra", "consulta": "t/8882/n1/all/v/7169/c11046/56733/c85/103154", "var": "pct"},
+    {"segmento": "Farmácias e drogarias", "indicador": "Volume de vendas de artigos farmacêuticos", "conector": "sidra", "consulta": "t/8882/n1/all/v/7169/c11046/56734/c85/103155", "var": "pct"},
+    {"segmento": "Farmácias e drogarias", "indicador": "Receita nominal de artigos farmacêuticos", "conector": "sidra", "consulta": "t/8882/n1/all/v/7169/c11046/56733/c85/103155", "var": "pct"},
+    {"segmento": "Vestuário", "indicador": "Volume de vendas de tecidos, vestuário e calçados", "conector": "sidra", "consulta": "t/8882/n1/all/v/7169/c11046/56734/c85/90673", "var": "pct"},
+
+    {"segmento": "Alimentos", "indicador": "IPCA de alimentação e bebidas", "conector": "sidra", "consulta": "t/7060/n1/all/v/2265/c315/7170", "var": "pp"},
+    {"segmento": "Supermercados e hipermercados", "indicador": "IPCA de alimentação no domicílio", "conector": "sidra", "consulta": "t/7060/n1/all/v/2265/c315/7171", "var": "pp"},
+    {"segmento": "Vestuário", "indicador": "IPCA de vestuário", "conector": "sidra", "consulta": "t/7060/n1/all/v/2265/c315/7558", "var": "pp"}
+  ]
+}

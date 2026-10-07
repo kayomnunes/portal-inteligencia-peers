@@ -1,0 +1,173 @@
+{
+ "_como_usar": "Eventos da Agenda setorial. Campos iguais aos do portal (tipo, titulo, data AAAA-MM-DD, local, industria, divisao, offering, detalhe, url, id). Use \"recorrencia\": \"anual\" para eventos que se repetem todo ano: quando a data passar, o script move para o ano seguinte. Eventos já realizados saem da Agenda sozinhos.",
+ "eventos": [
+  {
+   "tipo": "Data regulatória",
+   "titulo": "Reaplicação do Encceja (fundamental e médio)",
+   "data": "2026-10-06",
+   "local": "Nacional",
+   "industria": "Educação",
+   "divisao": "Público",
+   "offering": "Digital Products + Platforms",
+   "detalhe": "Reaplicação em 6/10 (fundamental) e 7/10 (médio) para quem teve problema logístico ou doença.",
+   "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/encceja-inep-disponibiliza-locais-de-reaplicacao-de-prova",
+   "id": "e1"
+  },
+  {
+   "tipo": "Evento",
+   "titulo": "Universo TOTVS 2026",
+   "data": "2026-10-13",
+   "local": "Expo Center Norte, São Paulo",
+   "industria": "Varejo",
+   "divisao": "Retail",
+   "offering": "Tech Strategy",
+   "detalhe": "Dois dias, até 14/10, com 23 sessões sobre varejo, distribuição e supermercados, com foco em IA e omnicanalidade.",
+   "url": "https://www.foodconnection.com.br/mercado/universo-totvs-tera-programacao-dedicada-aos-desafios-e-as-oportunidades-do-varejo/",
+   "id": "e2"
+  },
+  {
+   "tipo": "Data regulatória",
+   "titulo": "Reaplicação do Enamed",
+   "data": "2026-10-18",
+   "local": "Nacional",
+   "industria": "Educação",
+   "divisao": "Privado",
+   "offering": "Strategy + M&A",
+   "detalhe": "Reaplicação para quem perdeu a prova de 13/09; gabarito preliminar em 20/10 e resultado final em 04/12.",
+   "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/enamed-candidatos-podem-checar-se-pedido-de-reaplicacao-foi-aprovado",
+   "id": "e3"
+  },
+  {
+   "tipo": "Evento",
+   "titulo": "Seafood Show Latin America",
+   "data": "2026-10-20",
+   "local": "São Paulo (SP)",
+   "industria": "A&B + Agro",
+   "divisao": "Agro",
+   "offering": "Sustainability",
+   "detalhe": "Evento de 20 a 22 de outubro sobre a cadeia de pescados e aquicultura, com foco em sustentabilidade e mercados internacionais.",
+   "url": "https://comprerural.com/confira-o-calendario-das-feiras-agropecuarias-em-2026-responsaveis-por-movimentacao-bilionaria/",
+   "id": "e4"
+  },
+  {
+   "tipo": "Divulgação de resultado",
+   "titulo": "Bradesco Saúde (Bradsaúde) · resultados do 3T26",
+   "data": "2026-10-21",
+   "local": "Divulgação",
+   "industria": "Health",
+   "divisao": "Saúde suplementar",
+   "offering": "Finance",
+   "detalhe": "Data publicada pela imprensa; confirmar no RI antes de usar com cliente.",
+   "url": "https://investidor10.com.br/noticias/3t26-mais-de-15-empresas-divulgam-resultados-em-outubro-veja-122884/",
+   "id": "e5"
+  },
+  {
+   "tipo": "Data regulatória",
+   "titulo": "Inscrições Fies 2026/2 (vagas remanescentes)",
+   "data": "2026-10-26",
+   "local": "Portal Único de Acesso ao Ensino Superior",
+   "industria": "Educação",
+   "divisao": "Privado",
+   "offering": "Customer Experience",
+   "detalhe": "Inscrições até 3/11, com resultado em 16/11.",
+   "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/fies-20262-instituicoes-de-ensino-podem-ofertar-vagas-remanescentes",
+   "id": "e6"
+  },
+  {
+   "tipo": "Divulgação de resultado",
+   "titulo": "Santander Brasil · resultados do 3T26",
+   "data": "2026-10-28",
+   "local": "Divulgação",
+   "industria": "Financial Services",
+   "divisao": "Banking",
+   "offering": "Finance",
+   "detalhe": "Data publicada pela imprensa; confirmar no RI antes de usar com cliente.",
+   "url": "https://investidor10.com.br/noticias/3t26-mais-de-15-empresas-divulgam-resultados-em-outubro-veja-122884/",
+   "id": "e7"
+  },
+  {
+   "tipo": "Divulgação de resultado",
+   "titulo": "Ambev · resultados do 3T26",
+   "data": "2026-10-29",
+   "local": "Divulgação e webcast às 12h30 (Brasília)",
+   "industria": "A&B + Agro",
+   "divisao": "A&B",
+   "offering": "Finance",
+   "detalhe": "Divulgação antes da abertura da B3 e da NYSE, com webcast às 12h30. Data confirmada no RI.",
+   "url": "https://ri.ambev.com.br/",
+   "id": "e8"
+  },
+  {
+   "tipo": "Evento",
+   "titulo": "HFN (Hotel & Food Nordeste)",
+   "data": "2026-11-04",
+   "local": "Recife (PE)",
+   "industria": "A&B + Agro",
+   "divisao": "A&B",
+   "offering": "Customer Experience",
+   "detalhe": "Evento de 4 a 6 de novembro sobre tendências e comportamento do consumidor no food service.",
+   "url": "https://saipos.com/noticia/eventos-do-mercado-food-service-em-2026",
+   "id": "e9"
+  },
+  {
+   "tipo": "Data regulatória",
+   "titulo": "Enem 2026, primeiro dia",
+   "data": "2026-11-08",
+   "local": "Nacional",
+   "industria": "Educação",
+   "divisao": "Público",
+   "offering": "Analytics + IA",
+   "detalhe": "Linguagens, Redação e Ciências Humanas; o segundo dia é em 15/11.",
+   "url": "https://portal.estrategia.com/vestibular-e-enem/enem/inep-divulga-edital-do-enem-2026-com-datas-confirmadas/",
+   "id": "e10"
+  },
+  {
+   "tipo": "Evento",
+   "titulo": "Global Summit on Sustainable Insurance na COP31",
+   "data": "2026-11-13",
+   "local": "Antalya, Turquia",
+   "industria": "Financial Services",
+   "divisao": "Insurance",
+   "offering": "Sustainability",
+   "detalhe": "Cúpula na Casa dos Seguros da COP31, organizada por TSB e UNEP FI, em 13 e 14/11, com lançamento de white paper sobre insurabilidade.",
+   "url": "https://revistaapolice.com.br/2026/10/cop31-tera-cupula-global-de-seguros-sustentaveis/",
+   "id": "e11"
+  },
+  {
+   "tipo": "Data regulatória",
+   "titulo": "Enem 2026, segundo dia",
+   "data": "2026-11-15",
+   "local": "Nacional",
+   "industria": "Educação",
+   "divisao": "Público",
+   "offering": "Analytics + IA",
+   "detalhe": "Ciências da Natureza e Matemática; gabarito em até 10 dias úteis após a prova.",
+   "url": "https://portal.estrategia.com/vestibular-e-enem/enem/inep-divulga-edital-do-enem-2026-com-datas-confirmadas/",
+   "id": "e12"
+  },
+  {
+   "tipo": "Data regulatória",
+   "titulo": "Resultado final do Enamed",
+   "data": "2026-12-04",
+   "local": "Nacional",
+   "industria": "Educação",
+   "divisao": "Privado",
+   "offering": "Strategy + M&A",
+   "detalhe": "Exame obrigatório para o registro de médicos no CRM e usado na avaliação de cursos de medicina.",
+   "url": "https://agenciabrasil.ebc.com.br/educacao/noticia/2026-10/enamed-candidatos-podem-checar-se-pedido-de-reaplicacao-foi-aprovado",
+   "id": "e13"
+  },
+  {
+   "tipo": "Data regulatória",
+   "titulo": "Prazo da Resolução Conjunta 18/2025 (qualidade da informação ao BC)",
+   "data": "2026-12-31",
+   "local": "Brasil",
+   "industria": "Financial Services",
+   "divisao": "Banking",
+   "offering": "Analytics + IA",
+   "detalhe": "Instituições financeiras devem ter a política de qualidade da informação implementada até esta data.",
+   "url": "https://finsidersbrasil.com.br/regulamentacao/inventario-de-dados-vira-desafio-para-instituicoes-na-nova-regra-do-bc/",
+   "id": "e14"
+  }
+ ]
+}
