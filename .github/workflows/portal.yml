@@ -1,0 +1,78 @@
+# Atualiza os dados do portal e publica no GitHub Pages.
+# - Todo dia às 6h (Brasília): roda os scripts do Backend, que respeitam a cadência de cada tipo de dado,
+#   gravam os dados no Supabase e publica a página. Os dados não ficam no repositório nem no site público:
+#   a página só os recebe do Supabase depois do login com e-mail da Peers.
+# - Precisa dos Secrets SUPABASE_URL e SUPABASE_SERVICE_KEY (Settings > Secrets and variables > Actions).
+# - A cada envio de arquivos (push) para a branch main: só publica a página.
+# - Manualmente (aba Actions > "Atualizar e publicar o portal" > Run workflow): atualiza tudo e publica.
+name: Atualizar e publicar o portal
+
+on:
+  schedule:
+    - cron: "0 9 * * *"          # 9h UTC = 6h em Brasília
+  workflow_dispatch:
+    inputs:
+      forcar:
+        description: "Atualizar todos os tipos de dado agora, ignorando a cadência"
+        type: boolean
+        default: true
+  push:
+    branches: [main]
+
+permissions:
+  contents: write                # gravar o calendário (eventos anuais avançam de ano) no repositório
+  pages: write                   # publicar no GitHub Pages
+  id-token: write
+
+concurrency:
+  group: portal
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Atualizar dados no Supabase
+        working-directory: Backend
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python atualizar_portal.py ${{ (github.event_name == 'workflow_dispatch' && inputs.forcar) && '--forcar' || '' }}
+      - name: Gravar calendário no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Backend/config/calendario.json
+          if git diff --cached --quiet; then
+            echo "Nada mudou no calendário."
+          else
+            git commit -m "Atualização automática do calendário ($(TZ=America/Sao_Paulo date '+%d/%m/%Y %H:%M'))"
+            git push
+          fi
+
+  publicar:
+    needs: atualizar
+    if: always() && (needs.atualizar.result == 'success' || needs.atualizar.result == 'skipped')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main                # pega a versão mais recente
+      - name: Montar o site (só a página; os dados vêm do Supabase após o login)
+        run: |
+          mkdir -p _site
+          cp Frontend/index.html _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
