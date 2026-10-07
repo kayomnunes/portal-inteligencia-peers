@@ -1,0 +1,19 @@
+# Documentos de trabalho da R&I: não vão para o repositório público
+*.docx
+*.pdf
+*.xlsx
+*.pptx
+V anteriores/
+Frontend/index_v4.html
+desktop.ini
+__pycache__/
+
+# Dados do portal: ficam no Supabase, protegidos pelo login (a pasta local serve só para a carga inicial
+# e para as atualizações manuais de Finanças, ver README)
+Frontend/dados/
+
+# Chaves do Supabase, se guardadas em arquivo no computador
+.env
+
+# Cópia do controle de versão do repositório original (do amigo), guardada só por segurança
+.git_do_amigo_backup/
